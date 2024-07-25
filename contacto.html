@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - NOWBAN</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("SCW4yuWiAr8ft0Utg");
+        })();
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="colecciones.html">Colecciones</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <img src="imag1/logoversion2-removebg-preview2.png" alt="Logo" class="small-logo">
+                <div class="cart-container">
+                    <a href="carrito.html">
+                        <img src="imag1/carro.png" alt="Carrito" class="cart-icon">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <h1>Contacto</h1>
+            <h2>Cualquier duda, petición o aportación para la marca es bienvenida!</h2>
+            <h2>Además puedes unirte a nosotros y formar parte de este proyecto.</h2>
+
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Nombre" required>
+                    <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone" placeholder="Número de teléfono" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Comentario" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NOWBAN. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
