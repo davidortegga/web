@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagar - NOWBAN</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="colecciones.html">Colecciones</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <img src="imag1/logoversion2-removebg-preview2.png" alt="Logo" class="small-logo">
+                <div class="cart-container">
+                    <a href="carrito.html">
+                        <img src="imag1/carro.png" alt="Carrito" class="cart-icon">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="payment">
+            <div class="product-images">
+                <img id="main-image" src="" alt="Product Image" class="main-image">
+                <div class="small-images">
+                    <img id="small-image-1" src="" alt="Small Image 1" class="small-image">
+                    <img id="small-image-2" src="" alt="Small Image 2" class="small-image">
+                </div>
+            </div>
+            <div class="product-details">
+                <h2 id="product-title">Product Title</h2>
+                <p id="product-price">$0.00</p>
+                <button class="add-to-cart-button" onclick="addToCart(document.getElementById('product-title').textContent, document.getElementById('product-price').textContent, document.getElementById('main-image').src)">Añadir al Carrito</button>
+                <button class="buy-now-button">Comprar Ahora</button>
+            </div>
+        </section>
+
+        <section class="social-media">
+            <h2>Nuestras Redes</h2>
+            <div class="social-links">
+                <a href="https://www.instagram.com/nowbancap/">Instagram</a>
+                <a href="https://www.tiktok.com/@nowbancaps?lang=es">TikTok</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NOWBAN. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const product = urlParams.get('product');
+        const price = urlParams.get('price');
+
+        document.getElementById('product-title').textContent = product;
+        document.getElementById('product-price').textContent = `$${price}`;
+
+        const mainImage = document.getElementById('main-image');
+        const smallImage1 = document.getElementById('small-image-1');
+        const smallImage2 = document.getElementById('small-image-2');
+
+        switch (product) {
+            case 'Black Wings':
+                mainImage.src = 'imag1/negoralas.png';
+                smallImage1.src = 'imag1/negoralas_side1.png';
+                smallImage2.src = 'imag1/negoralas_side2.png';
+                break;
+            case 'Green Wings':
+                mainImage.src = 'imag1/verdealas.png';
+                smallImage1.src = 'imag1/verdealas_side1.png';
+                smallImage2.src = 'imag1/verdealas_side2.png';
+                break;
+            case 'EST\'2024 WHITE AND BLACK':
+                mainImage.src = 'imag1/blanconuevopng.png';
+                smallImage1.src = 'imag1/blanconuevopng_side1.png';
+                smallImage2.src = 'imag1/blanconuevopng_side2.png';
+                break;
+            case 'EST\'2024 BLUE':
+                mainImage.src = 'imag1/est2024blue.png';
+                smallImage1.src = 'imag1/est2024blue_side1.png';
+                smallImage2.src = 'imag1/est2024blue_side2.png';
+                break;
+            case 'Nowban Black':
+                mainImage.src = 'imag1/negrologo.png';
+                smallImage1.src = 'imag1/negrologo_side1.png';
+                smallImage2.src = 'imag1/negrologo_side2.png';
+                break;
+            case 'Nowban White':
+                mainImage.src = 'imag1/blancologo.png';
+                smallImage1.src = 'imag1/blancologo_side1.png';
+                smallImage2.src = 'imag1/blancologo_side2.png';
+                break;
+            case 'Nowban Brown':
+                mainImage.src = 'imag1/logomarron.png';
+                smallImage1.src = 'imag1/logomarron_side1.png';
+                smallImage2.src = 'imag1/logomarron_side2.png';
+                break;
+            case 'Scratches black':
+                mainImage.src = 'imag1/gorraArañazos.png';
+                smallImage1.src = 'imag1/gorraArañazos_side1.png';
+                smallImage2.src = 'imag1/gorraArañazos_side2.png';
+                break;
+            case 'FIRE':
+                mainImage.src = 'imag1/fuego.png';
+                smallImage1.src = 'imag1/fuego_side1.png';
+                smallImage2.src = 'imag1/fuego_side2.png';
+                break;
+            default:
+                mainImage.src = '';
+                smallImage1.src = '';
+                smallImage2.src = '';
+        }
+    </script>
+</body>
+</html>

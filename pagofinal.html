@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago Final - NOWBAN</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="colecciones.html">Colecciones</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="payment-section">
+            <div class="payment-form">
+                <h1>Contacto</h1>
+                <input type="email" placeholder="Email o número de teléfono móvil" required>
+                <div class="checkbox">
+                    <input type="checkbox" id="offers">
+                    <label for="offers">Enviarme novedades y ofertas por correo electrónico</label>
+                </div>
+                <h2>Entrega</h2>
+                <select required>
+                    <option value="España">España</option>
+                    <option value="Francia">Francia</option>
+                    <option value="Italia">Italia</option>
+                    <option value="Alemania">Alemania</option>
+                    <option value="Inglaterra">Inglaterra</option>
+                    <option value="Estados Unidos">Estados Unidos</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Colombia">Colombia</option>
+                </select>
+                <input type="text" placeholder="Nombre (opcional)">
+                <input type="text" placeholder="Apellidos">
+                <input type="text" placeholder="Dirección">
+                <input type="text" placeholder="Casa, apartamento, etc. (opcional)">
+                <input type="text" placeholder="Ciudad">
+                <input type="text" placeholder="Código postal">
+                <h2>Pago</h2>
+                <div class="payment-method">
+                    <input type="radio" id="credit-card" name="payment-method" checked>
+                    <label for="credit-card">Tarjeta de crédito</label>
+                    <input type="text" placeholder="Número de tarjeta" required>
+                    <input type="text" placeholder="Fecha de vencimiento (MM / AA)" required>
+                    <input type="text" placeholder="Código de seguridad" required>
+                    <input type="text" placeholder="Nombre del titular" required>
+                    <div class="checkbox">
+                        <input type="checkbox" id="use-address">
+                        <label for="use-address">Usar la dirección de envío como dirección de facturación</label>
+                    </div>
+                    <input type="radio" id="paypal" name="payment-method">
+                    <label for="paypal">PayPal</label>
+                </div>
+                <div class="remember-me">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Guardar mi información para pagar más rápido</label>
+                </div>
+                <button type="submit" class="pay-now-button">Pagar ahora</button>
+            </div>
+
+            <div class="payment-summary">
+                <img id="product-image" src="imag1/product-placeholder.png" alt="Product Image">
+                <div class="product-details">
+                    <p id="product-name">Trucker 2024 blue</p>
+                    <p id="product-price">20,95 €</p>
+                </div>
+                <div class="subtotal">
+                    <p>Subtotal</p>
+                    <p id="subtotal-price">20,95 €</p>
+                </div>
+                <div class="shipping">
+                    <p>Métodos de envío</p>
+                    <p>Introducir la dirección de envío</p>
+                </div>
+                <div class="total">
+                    <p>Total</p>
+                    <p id="total-price">20,95 €</p>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NOWBAN. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
